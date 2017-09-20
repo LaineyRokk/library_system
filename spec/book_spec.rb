@@ -10,9 +10,9 @@ describe(Book) do
 
   describe(".find") do
     it("returns a book by its ID number") do
-      test_book = Book.new({:title => "Grapes of Wrath", :id => 1, :status => nil, :due_date => "2017-09-30", :patron_id => nil})
+      test_book = Book.new({:title => "Grapes of Wrath", :id => 1, :status => nil, :due_date => "2017-09-30", :patron_id => 1})
       test_book.save()
-      test_book2 = Book.new({:title => "Pride and Prejudice", :id => 2, :status => nil, :due_date => "2017-09-30", :patron_id => nil})
+      test_book2 = Book.new({:title => "Pride and Prejudice", :id => 2, :status => nil, :due_date => "2017-09-30", :patron_id => 1})
       test_book2.save()
       expect(Book.find(test_book2.id())).to(eq(test_book2))
     end

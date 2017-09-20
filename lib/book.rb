@@ -34,7 +34,7 @@ class Book
   end
 
   def save
-    result = DB.exec("INSERT INTO books (title, id, status, due_date, patron_id) VALUE ('#{@title}', #{@id}, '#{@status}', '#{@due_date}'', #{@patron_id});")
+    result = DB.exec("INSERT INTO books (title, id, status, due_date, patron_id) VALUES ('#{@title}', #{@id}, '#{@status}', '#{@due_date}', #{@patron_id});")
 
   end
 
